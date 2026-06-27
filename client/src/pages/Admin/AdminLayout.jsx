@@ -43,7 +43,15 @@ export default function AdminLayout() {
       <aside className={`sidebar ${sidebarOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header">
           <div className="sidebar-logo">
-            <img src={logo} alt="DarkLight Logo" style={{ height: '36px', objectFit: 'contain' }} />
+            <img
+              src={logo}
+              alt="DarkLight Logo"
+              style={{
+                height: '46px',
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 0 6px rgba(201, 169, 110, 0.35))'
+              }}
+            />
             <span style={{ fontSize: '0.65rem', background: 'var(--gold)', color: 'var(--dark)', padding: '2px 6px', borderRadius: '4px', marginLeft: '8px', fontWeight: 700 }}>ADMIN</span>
           </div>
         </div>

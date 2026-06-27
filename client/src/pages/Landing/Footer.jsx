@@ -15,7 +15,15 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src={logo} alt="DarkLight Logo" style={{ height: '36px', objectFit: 'contain' }} />
+              <img
+                src={logo}
+                alt="DarkLight Logo"
+                style={{
+                  height: '52px',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 0 8px rgba(201, 169, 110, 0.4)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7))'
+                }}
+              />
             </div>
             <p className="footer-tagline">
               Transforming fleeting moments into timeless visual stories. Premium photography for life's most important occasions.

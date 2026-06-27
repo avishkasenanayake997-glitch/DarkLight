@@ -44,7 +44,15 @@ export default function CustomerLayout() {
       <aside className={`sidebar ${sidebarOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header">
           <div className="sidebar-logo">
-            <img src={logo} alt="DarkLight Logo" style={{ height: '36px', objectFit: 'contain' }} />
+            <img
+              src={logo}
+              alt="DarkLight Logo"
+              style={{
+                height: '46px',
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 0 6px rgba(201, 169, 110, 0.35))'
+              }}
+            />
           </div>
         </div>
 

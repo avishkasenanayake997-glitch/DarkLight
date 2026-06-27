@@ -36,7 +36,16 @@ export default function Navbar() {
       <div className="container nav-inner">
         {/* Logo */}
         <Link to="/" className="nav-logo">
-          <img src={logo} alt="DarkLight Logo" style={{ height: '40px', objectFit: 'contain' }} />
+          <img
+            src={logo}
+            alt="DarkLight Logo"
+            style={{
+              height: '56px',
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 0 8px rgba(201, 169, 110, 0.4)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7))',
+              transition: 'all 0.3s ease'
+            }}
+          />
         </Link>
 
         {/* Desktop Links */}

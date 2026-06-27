@@ -25,8 +25,16 @@ export default function ForgotPasswordPage() {
   return (
     <div className="auth-container">
       <div className="card-glass auth-card">
-        <Link to="/" className="auth-logo">
-          <img src={logo} alt="DarkLight Logo" style={{ height: '44px', objectFit: 'contain' }} />
+        <Link to="/" className="auth-logo" style={{ marginBottom: '16px', display: 'flex', justifyContent: 'center' }}>
+          <img
+            src={logo}
+            alt="DarkLight Logo"
+            style={{
+              height: '70px',
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 0 10px rgba(201, 169, 110, 0.45)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8))'
+            }}
+          />
         </Link>
         <p className="auth-subtitle">Enter your email to receive a password reset link</p>
 
