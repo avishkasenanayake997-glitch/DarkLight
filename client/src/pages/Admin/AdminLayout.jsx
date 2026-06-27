@@ -148,7 +148,7 @@ export default function AdminLayout() {
               {unreadCount > 0 && <span className="badge-dot" />}
             </button>
 
-            <div className="user-profile-menu">
+            <div className="user-profile-menu" onClick={() => navigate('/admin/settings')}>
               <img
                 src={user?.profile_image || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100'}
                 alt={user?.name}
