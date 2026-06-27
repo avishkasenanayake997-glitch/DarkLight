@@ -169,7 +169,7 @@ export default function CustomersPage() {
                     </div>
                     {b.additional_charges > 0 && (
                       <div style={{ fontSize: '0.82rem', color: 'var(--gold)', marginTop: '4px', fontWeight: 600 }}>
-                        + Addon: ${b.additional_charges}
+                        + Addon: LKR {b.additional_charges.toLocaleString()}
                       </div>
                     )}
                   </div>

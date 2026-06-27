@@ -87,7 +87,7 @@ export default function ReportsPage() {
 
         {/* Revenue Chart */}
         <div className="card-glass" style={{ padding: '24px', height: '360px', display: 'flex', flexDirection: 'column' }}>
-          <h3 className="font-display" style={{ fontSize: '1.1rem', marginBottom: '20px' }}>Revenue Stream ($)</h3>
+          <h3 className="font-display" style={{ fontSize: '1.1rem', marginBottom: '20px' }}>Revenue Stream (LKR)</h3>
           <div style={{ flex: 1 }}>
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={revenueData}>

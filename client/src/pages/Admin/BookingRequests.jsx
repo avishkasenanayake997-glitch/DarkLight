@@ -286,7 +286,7 @@ export default function BookingRequests() {
                 <div style={{ background: 'rgba(16,185,129,0.05)', border: '1px solid rgba(16,185,129,0.2)', padding: '16px', borderRadius: '8px', marginTop: '12px' }}>
                   <div style={{ color: 'var(--approved)', fontWeight: 600, fontSize: '0.82rem', textTransform: 'uppercase', marginBottom: '8px' }}>Approved Details</div>
                   {selectedBooking.meeting_time && <div style={{ fontSize: '0.85rem', marginBottom: '4px' }}>💬 Meeting Time: {selectedBooking.meeting_time}</div>}
-                  {selectedBooking.additional_charges > 0 && <div style={{ fontSize: '0.85rem', marginBottom: '4px' }}>💵 Extra Cost: ${selectedBooking.additional_charges}</div>}
+                  {selectedBooking.additional_charges > 0 && <div style={{ fontSize: '0.85rem', marginBottom: '4px' }}>💵 Extra Cost: LKR {selectedBooking.additional_charges.toLocaleString()}</div>}
                   {selectedBooking.admin_note && <div style={{ fontSize: '0.85rem', fontStyle: 'italic', color: 'var(--white-70)' }}>Notes: "{selectedBooking.admin_note}"</div>}
                 </div>
               )}

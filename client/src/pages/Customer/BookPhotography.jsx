@@ -148,7 +148,7 @@ export default function BookPhotography() {
               <option value="">Choose package...</option>
               {packages.map((pkg) => (
                 <option key={pkg._id} value={pkg._id}>
-                  {pkg.name} — ${pkg.price} ({pkg.duration})
+                  {pkg.name} — LKR {pkg.price.toLocaleString()} ({pkg.duration})
                 </option>
               ))}
             </select>

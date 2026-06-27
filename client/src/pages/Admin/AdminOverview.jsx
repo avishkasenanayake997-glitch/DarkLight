@@ -40,7 +40,7 @@ export default function AdminOverview() {
     { label: "Today's Events", value: stats.todayEvents, Icon: Calendar, color: 'var(--approved)' },
     { label: 'Completed Jobs', value: stats.completed, Icon: CheckSquare, color: 'var(--completed)' },
     { label: 'Total Customers', value: stats.totalCustomers, Icon: Users, color: 'var(--gold)' },
-    { label: 'Monthly Revenue', value: `$${stats.monthlyRevenue || 0}`, Icon: DollarSign, color: 'var(--approved)' },
+    { label: 'Monthly Revenue', value: `LKR ${(stats.monthlyRevenue || 0).toLocaleString()}`, Icon: DollarSign, color: 'var(--approved)' },
   ];
 
   if (loading) {

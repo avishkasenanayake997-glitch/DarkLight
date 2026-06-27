@@ -133,7 +133,7 @@ export default function BookingDetail() {
                   {booking.additional_charges > 0 && (
                     <div>
                       <span style={{ fontSize: '0.8rem', color: 'var(--white-40)' }}>💵 ADDITIONAL CHARGES</span>
-                      <p style={{ fontWeight: 600 }}>${booking.additional_charges}</p>
+                      <p style={{ fontWeight: 600 }}>LKR {booking.additional_charges.toLocaleString()}</p>
                     </div>
                   )}
                   {booking.admin_note && (
@@ -179,7 +179,7 @@ export default function BookingDetail() {
               {booking.package_id?.name || 'Custom Package'}
             </div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', margin: '12px 0' }}>
-              <span style={{ fontSize: '1.8rem', fontWeight: 700 }}>${booking.package_id?.price || 0}</span>
+              <span style={{ fontSize: '1.8rem', fontWeight: 700 }}>LKR {(booking.package_id?.price || 0).toLocaleString()}</span>
               <span style={{ color: 'var(--white-40)', fontSize: '0.85rem' }}>/ {booking.package_id?.duration}</span>
             </div>
             <p style={{ fontSize: '0.82rem', color: 'var(--white-40)', lineHeight: 1.6, marginBottom: '20px' }}>
@@ -189,18 +189,18 @@ export default function BookingDetail() {
             <div style={{ borderTop: '1px solid var(--dark-border)', paddingTop: '16px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.9rem', marginBottom: '8px' }}>
                 <span style={{ color: 'var(--white-70)' }}>Package Price</span>
-                <span>${booking.package_id?.price || 0}</span>
+                <span>LKR {(booking.package_id?.price || 0).toLocaleString()}</span>
               </div>
               {booking.additional_charges > 0 && (
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.9rem', marginBottom: '8px' }}>
                   <span style={{ color: 'var(--white-70)' }}>Add-ons / Meeting Charges</span>
-                  <span>${booking.additional_charges}</span>
+                  <span>LKR {booking.additional_charges.toLocaleString()}</span>
                 </div>
               )}
               <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 600, fontSize: '1.05rem', borderTop: '1.5px solid var(--dark-border)', paddingTop: '12px', marginTop: '12px' }}>
                 <span>Total Amount</span>
                 <span style={{ color: 'var(--gold)' }}>
-                  ${(booking.package_id?.price || 0) + (booking.additional_charges || 0)}
+                  LKR {((booking.package_id?.price || 0) + (booking.additional_charges || 0)).toLocaleString()}
                 </span>
               </div>
             </div>

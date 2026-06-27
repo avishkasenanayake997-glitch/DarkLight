@@ -136,7 +136,7 @@ export default function PackagesPage() {
               </div>
 
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', margin: '14px 0 4px' }}>
-                <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--gold)', fontFamily: 'var(--font-display)' }}>${pkg.price}</span>
+                <span style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--gold)', fontFamily: 'var(--font-display)' }}>LKR {pkg.price.toLocaleString()}</span>
                 <span style={{ color: 'var(--white-40)', fontSize: '0.8rem' }}>/ {pkg.duration}</span>
               </div>
 
@@ -182,7 +182,7 @@ export default function PackagesPage() {
 
               <div className="form-grid">
                 <div className="form-group">
-                  <label className="form-label">Price ($)</label>
+                  <label className="form-label">Price (LKR)</label>
                   <input type="number" className="form-input" value={price} onChange={(e) => setPrice(e.target.value)} required min="0" />
                 </div>
                 <div className="form-group" style={{ justifyContent: 'center', gap: '8px' }}>
