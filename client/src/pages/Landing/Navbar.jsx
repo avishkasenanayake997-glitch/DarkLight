@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Camera } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import logo from '../../assets/Logo/Logo W.webp';
 import './Landing.css';
 
 const navLinks = [
@@ -35,10 +36,7 @@ export default function Navbar() {
       <div className="container nav-inner">
         {/* Logo */}
         <Link to="/" className="nav-logo">
-          <Camera size={22} className="logo-icon" />
-          <span className="logo-text">
-            Dark<span>Light</span>
-          </span>
+          <img src={logo} alt="DarkLight Logo" style={{ height: '40px', objectFit: 'contain' }} />
         </Link>
 
         {/* Desktop Links */}

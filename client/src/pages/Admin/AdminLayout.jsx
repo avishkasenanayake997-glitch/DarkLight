@@ -3,6 +3,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, Calendar, FileCheck, Users, HardDrive, Image, BarChart3, Bell, Settings, LogOut, Camera, Menu } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { notificationAPI } from '../../api';
+import logo from '../../assets/Logo/Logo W.webp';
 import './AdminLayout.css';
 
 export default function AdminLayout() {
@@ -42,9 +43,8 @@ export default function AdminLayout() {
       <aside className={`sidebar ${sidebarOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header">
           <div className="sidebar-logo">
-            <Camera size={22} className="logo-icon" />
-            <span>DarkLight</span>
-            <span style={{ fontSize: '0.65rem', background: 'var(--gold)', color: 'var(--dark)', padding: '2px 6px', borderRadius: '4px', marginLeft: '6px', fontWeight: 700 }}>ADMIN</span>
+            <img src={logo} alt="DarkLight Logo" style={{ height: '36px', objectFit: 'contain' }} />
+            <span style={{ fontSize: '0.65rem', background: 'var(--gold)', color: 'var(--dark)', padding: '2px 6px', borderRadius: '4px', marginLeft: '8px', fontWeight: 700 }}>ADMIN</span>
           </div>
         </div>
 

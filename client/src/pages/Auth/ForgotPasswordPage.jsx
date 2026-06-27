@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Camera, Mail, ArrowLeft } from 'lucide-react';
 import toast from 'react-hot-toast';
+import logo from '../../assets/Logo/Logo W.webp';
 import './Auth.css';
 
 export default function ForgotPasswordPage() {
@@ -25,8 +26,7 @@ export default function ForgotPasswordPage() {
     <div className="auth-container">
       <div className="card-glass auth-card">
         <Link to="/" className="auth-logo">
-          <Camera size={26} className="logo-icon" />
-          <span>DarkLight</span>
+          <img src={logo} alt="DarkLight Logo" style={{ height: '44px', objectFit: 'contain' }} />
         </Link>
         <p className="auth-subtitle">Enter your email to receive a password reset link</p>
 

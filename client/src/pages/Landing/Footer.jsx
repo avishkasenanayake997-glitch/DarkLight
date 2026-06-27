@@ -1,4 +1,4 @@
-import { Camera } from 'lucide-react';
+import logo from '../../assets/Logo/Logo W.webp';
 import { Link } from 'react-router-dom';
 
 const footerLinks = {
@@ -15,8 +15,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <div className="footer-logo">
-              <Camera size={20} style={{ color: 'var(--gold)' }} />
-              Dark<span style={{ color: 'var(--gold)' }}>Light</span>
+              <img src={logo} alt="DarkLight Logo" style={{ height: '36px', objectFit: 'contain' }} />
             </div>
             <p className="footer-tagline">
               Transforming fleeting moments into timeless visual stories. Premium photography for life's most important occasions.

@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Camera, Mail, Lock } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import toast from 'react-hot-toast';
+import logo from '../../assets/Logo/Logo W.webp';
 import './Auth.css';
 
 export default function LoginPage() {
@@ -40,8 +41,7 @@ export default function LoginPage() {
     <div className="auth-container">
       <div className="card-glass auth-card">
         <Link to="/" className="auth-logo">
-          <Camera size={26} className="logo-icon" />
-          <span>DarkLight</span>
+          <img src={logo} alt="DarkLight Logo" style={{ height: '44px', objectFit: 'contain' }} />
         </Link>
         <p className="auth-subtitle">Sign in to manage your photography bookings</p>
 

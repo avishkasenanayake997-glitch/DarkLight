@@ -3,6 +3,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, CalendarPlus, Receipt, Bell, User, LogOut, Camera, Menu, HardDrive } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { notificationAPI } from '../../api';
+import logo from '../../assets/Logo/Logo W.webp';
 import './Customer.css';
 
 export default function CustomerLayout() {
@@ -43,8 +44,7 @@ export default function CustomerLayout() {
       <aside className={`sidebar ${sidebarOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header">
           <div className="sidebar-logo">
-            <Camera size={22} className="logo-icon" />
-            <span>DarkLight</span>
+            <img src={logo} alt="DarkLight Logo" style={{ height: '36px', objectFit: 'contain' }} />
           </div>
         </div>
 
