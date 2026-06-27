@@ -9,29 +9,54 @@ import { packageAPI } from '../../api';
 const defaultPackages = [
   {
     _id: '1',
-    name: 'Basic',
-    price: 100,
-    duration: '2 Hours',
-    description: 'Perfect for small events and personal photoshoots',
-    features: ['2 Hours of Photography', '50+ Edited Photos', 'Online Gallery', '1 Photographer', 'Digital Downloads'],
-    is_popular: false,
-  },
-  {
-    _id: '2',
-    name: 'Standard',
-    price: 250,
-    duration: '5 Hours',
-    description: 'Great for birthdays, graduations and medium events',
-    features: ['5 Hours of Photography', '150+ Edited Photos', 'Online Gallery', '1 Photographer', 'Print Rights', 'Same-Day Previews'],
+    name: 'ROYAL SIGNATURE PACKAGE #01',
+    price: 150000,
+    duration: 'Two Days',
+    description: 'Luxurious wedding & homecoming full day photography package.',
+    features: [
+      'Two Days Full Coverage (Wedding Day & Homecoming)',
+      '+ Free Pre-Shoot',
+      'Premium 12×30 or 16×24 Magazine Album (50-60 Pages) with Custom Box',
+      'Premium 8×24 preshoot Album (10-12 Pages)',
+      '20×30 Enlargement',
+      '16×24 Enlargement 03',
+      'Thank You Card 150',
+      'Pen Drive',
+      'All High-Resolution Edited Photos Provided in a Pen Drive'
+    ],
     is_popular: true,
   },
   {
+    _id: '2',
+    name: 'PLATINUM ELEGANCE PACKAGE #02',
+    price: 120000,
+    duration: 'Two Days',
+    description: 'Premium wedding & homecoming coverage with high-end magazine album.',
+    features: [
+      'Two Days Full Coverage (Wedding & Homecoming)',
+      'Free Pre-Shoot (Only One Location)',
+      'Premium 12×30 Magazine Album (20-30 Page) with Box',
+      '20×30 Enlargement 01',
+      '16×24 Enlargement 01',
+      'Thank You Card 150',
+      'All High-Resolution Edited Photos (Soft Copy)'
+    ],
+    is_popular: false,
+  },
+  {
     _id: '3',
-    name: 'Premium',
-    price: 500,
-    duration: 'Full Day',
-    description: 'Complete coverage for weddings and large events',
-    features: ['Full Day Coverage (8h)', '300+ Edited Photos', '2 Photographers', 'Photo Album', 'Drone Photography', 'Priority Editing'],
+    name: 'CLASSIC STORYTELLER PACKAGE #03',
+    price: 85000,
+    duration: 'One Day',
+    description: 'Classic wedding storytelling photography with magazine album and frames.',
+    features: [
+      'One Day Full Coverage (wedding Day Only)',
+      'Standard 10×24 Magazine Album (25-30 Pages) with Box',
+      '16×24 Premium Enlargement',
+      '12×18 Table Wall Frames',
+      'Thank You Card (5×7) 100',
+      'High - Resolution Edited Photo (Soft Copy)'
+    ],
     is_popular: false,
   },
 ];
@@ -71,8 +96,9 @@ export default function PackagesSection() {
               <div className="package-name">{pkg.name}</div>
               <p style={{ fontSize: '0.85rem', color: 'var(--white-40)', lineHeight: 1.6 }}>{pkg.description}</p>
 
-              <div className="package-price">
-                <sup>$</sup>{pkg.price}
+              <div className="package-price" style={{ fontSize: '1.8rem', display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                <span style={{ fontSize: '0.9rem', color: 'var(--gold-light)' }}>LKR</span>
+                <span>{pkg.price.toLocaleString()}</span>
               </div>
               <div className="package-duration">📅 {pkg.duration}</div>
 

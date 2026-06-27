@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, CalendarPlus, Receipt, Bell, User, LogOut, Camera, Menu } from 'lucide-react';
+import { LayoutDashboard, CalendarPlus, Receipt, Bell, User, LogOut, Camera, Menu, HardDrive } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { notificationAPI } from '../../api';
 import './Customer.css';
@@ -65,6 +65,14 @@ export default function CustomerLayout() {
           >
             <CalendarPlus size={18} />
             Book Shoot
+          </NavLink>
+          <NavLink
+            to="/dashboard/packages"
+            className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
+            onClick={() => setSidebarOpen(false)}
+          >
+            <HardDrive size={18} />
+            Packages
           </NavLink>
           <NavLink
             to="/dashboard/bookings"

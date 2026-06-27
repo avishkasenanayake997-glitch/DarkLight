@@ -17,6 +17,7 @@ import MyBookings from './pages/Customer/MyBookings';
 import BookingDetail from './pages/Customer/BookingDetail';
 import CustomerNotifications from './pages/Customer/CustomerNotifications';
 import CustomerProfile from './pages/Customer/CustomerProfile';
+import CustomerPackages from './pages/Customer/CustomerPackages';
 
 // Admin Dashboard
 import AdminLayout from './pages/Admin/AdminLayout';
@@ -69,6 +70,7 @@ function App() {
           >
             <Route index element={<CustomerOverview />} />
             <Route path="book" element={<BookPhotography />} />
+            <Route path="packages" element={<CustomerPackages />} />
             <Route path="bookings" element={<MyBookings />} />
             <Route path="bookings/:id" element={<BookingDetail />} />
             <Route path="notifications" element={<CustomerNotifications />} />

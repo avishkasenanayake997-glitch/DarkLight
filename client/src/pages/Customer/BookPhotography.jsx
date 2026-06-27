@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { Upload, X, Camera } from 'lucide-react';
 import { packageAPI, bookingAPI } from '../../api';
@@ -11,14 +11,25 @@ export default function BookPhotography() {
   const [imagePreviews, setImagePreviews] = useState([]);
   const [submitting, setSubmitting] = useState(false);
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const packageIdParam = searchParams.get('packageId') || '';
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, setValue, formState: { errors } } = useForm({
+    defaultValues: {
+      package_id: packageIdParam,
+    }
+  });
 
   useEffect(() => {
     packageAPI.getAll()
-      .then(({ data }) => setPackages(data.packages || []))
+      .then(({ data }) => {
+        setPackages(data.packages || []);
+        if (packageIdParam) {
+          setValue('package_id', packageIdParam);
+        }
+      })
       .catch(() => toast.error('Failed to load packages'));
-  }, []);
+  }, [packageIdParam, setValue]);
 
   const handleImageChange = (e) => {
     const files = Array.from(e.target.files);
