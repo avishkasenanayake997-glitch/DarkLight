@@ -1,0 +1,68 @@
+/* React Big Calendar Luxury Dark Override */
+.rbc-calendar {
+  color: var(--white) !important;
+  font-family: var(--font-body) !important;
+}
+
+.rbc-header {
+  color: var(--white-70) !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid var(--dark-border) !important;
+}
+
+.rbc-month-view {
+  border: 1px solid var(--dark-border) !important;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--dark-card);
+}
+
+.rbc-day-bg {
+  border-left: 1px solid var(--dark-border) !important;
+}
+
+.rbc-month-row {
+  border-top: 1px solid var(--dark-border) !important;
+}
+
+.rbc-today {
+  background-color: rgba(201,169,110,0.05) !important;
+}
+
+.rbc-off-range-bg {
+  background: rgba(255,255,255,0.01) !important;
+}
+
+.rbc-toolbar button {
+  color: var(--white-70) !important;
+  border: 1px solid var(--dark-border) !important;
+  background: var(--dark-surface) !important;
+  border-radius: 6px !important;
+  margin: 2px !important;
+  font-size: 0.85rem !important;
+  padding: 6px 12px !important;
+  transition: var(--transition-fast) !important;
+}
+
+.rbc-toolbar button:hover {
+  background: var(--white-10) !important;
+  color: var(--white) !important;
+  border-color: var(--gold) !important;
+}
+
+.rbc-toolbar button.rbc-active {
+  background: var(--gold) !important;
+  color: var(--dark) !important;
+  border-color: var(--gold) !important;
+  font-weight: 600;
+}
+
+.rbc-toolbar-label {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
